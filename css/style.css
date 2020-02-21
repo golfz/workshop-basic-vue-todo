@@ -1,0 +1,80 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  background-color: #f2f2f2;
+}
+
+.container {
+  width: 480px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 300;
+  color: #555;
+}
+
+input[type=text] {
+  border-style: none;
+  border-radius: 5px;
+  padding: 15px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn {
+  border-style: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn-add {
+  background-color: #3949ab;
+  margin-top: 10px;
+}
+
+.btn-add:hover {
+  background-color: #283593;
+}
+
+form {
+  margin-bottom: 25px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  border: 1px solid #888;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+input[type=checkbox] {
+  margin-right: 10px;
+}
+
+.btn-delete-task {
+  border-style: none;
+  background: url(/img/trash-alt-solid.svg) no-repeat;
+  height: 16px;
+  cursor: pointer;
+  outline: none;
+  float: right;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.filtered {
+  display: none;
+}

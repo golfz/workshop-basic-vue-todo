@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO - Vue.js</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app" class="container">
+    <h1>{{pageHeader}}</h1>
+    <form id="add-todo-form" v-on:submit.prevent="addTodo">
+      <input v-model="newTask" type="text" name="add-todo-input" placeholder="Add a new todo...">
+      <button class="btn btn-add" type="submit">Add</button>
+    </form>
+    <input v-model="filterTask" v-on:keyup="filterTodo" id="search" type="text" name="search" placeholder="Search...">
+    <ul class="todo-list">
+      <li v-for="todo in filteredTodos">
+        <input v-model="todo.done" type="checkbox"><span v-bind:class="{ 'done': todo.done }">{{todo.id}} - {{todo.text}}</span>
+        <button v-on:click="deleteTodo(todo.id)" class="btn-delete-task"></button>
+      </li>
+    </ul>
+  </div>
+
+  <script src="js/script2.js"></script>
+
+</body>
+
+</html>
